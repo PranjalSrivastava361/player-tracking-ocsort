@@ -1,5 +1,3 @@
-# tracking/base_tracker.py
-
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any
 import numpy as np
@@ -56,3 +54,4 @@ class BaseTracker(ABC):
             ]
         """
         pass
+
