@@ -1,4 +1,4 @@
-# Player Tracking in Sports Videos Using OC-SORT  
+<img width="716" height="2564" alt="image" src="https://github.com/user-attachments/assets/8ad09827-0afa-4256-8324-7f537ed90283" /># Player Tracking in Sports Videos Using OC-SORT  
 ### Assignment Submission – Multi-Object Tracking 
 
 This project implements the **architecture, abstract classes, and pipeline design** for a real-time multi-object player tracking system based on **OC-SORT**, as required in the assignment.
@@ -19,42 +19,10 @@ To maintain **consistent player IDs across frames**, a robust multi-object track
 
 ## Project Architecture
 
-┌──────────────────────────┐
-│      Input Video Frame    │
-└──────────────┬───────────┘
-               ▼
-┌──────────────────────────┐
-│ 1. Object Detection       │
-│    - YOLOX                │
-│    - Outputs: boxes+score │
-└──────────────┬───────────┘
-               ▼
-┌──────────────────────────┐
-│ 2. Pre-processing         │
-│    - Resize / scale       │
-│    - Remove low score     │
-└──────────────┬───────────┘
-               ▼
-┌──────────────────────────┐
-│ 3. OC-SORT Tracker        │
-│    - Kalman Filter        │
-│    - OCM (momentum)       │
-│    - OCR (recover)        │
-│    - OOS (smooth)         │
-│    - Hungarian matching   │
-└──────────────┬───────────┘
-               ▼
-┌──────────────────────────┐
-│ 4. ID Assignment          │
-│    - Consistent IDs       │
-│    - Re-appearance        │
-└──────────────┬───────────┘
-               ▼
-┌──────────────────────────┐
-│ 5. Visualization          │
-│    - Draw boxes + ID      │
-│    - Output video         │
-└──────────────────────────┘
+<img width="159" height="621" alt="githubimg drawio" src="https://github.com/user-attachments/assets/286293fc-40b3-4b89-abd7-99e11fb00450" />
+
+
+
 
 
 
