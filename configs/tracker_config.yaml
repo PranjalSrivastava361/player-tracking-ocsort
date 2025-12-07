@@ -1,0 +1,14 @@
+tracker:
+  name: "OCSORT"
+  iou_threshold: 0.3
+  max_age: 30
+  min_hits: 3
+
+detector:
+  name: "YOLOX"
+  conf_threshold: 0.25
+  nms_threshold: 0.45
+
+pipeline:
+  visualize_output: true
+  save_video: false
