@@ -1,5 +1,5 @@
 # Player Tracking in Sports Videos Using OC-SORT  
-### Assignment Submission – Multi-Object Tracking (MLE Shortlist)
+### Assignment Submission – Multi-Object Tracking 
 
 This project implements the **architecture, abstract classes, and pipeline design** for a real-time multi-object player tracking system based on **OC-SORT**, as required in the assignment.
 
@@ -18,4 +18,5 @@ To maintain **consistent player IDs across frames**, a robust multi-object track
 ---
 
 ## Project Architecture
+
 
