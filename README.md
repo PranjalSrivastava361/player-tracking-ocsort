@@ -22,46 +22,39 @@ To maintain **consistent player IDs across frames**, a robust multi-object track
 ┌──────────────────────────┐
 │      Input Video Frame    │
 └──────────────┬───────────┘
-               │
                ▼
 ┌──────────────────────────┐
-│   1. Object Detection     │  (YOLOX)
-│  - Detect players         │
-│  - Output: boxes + score  │
+│ 1. Object Detection       │
+│    - YOLOX                │
+│    - Outputs: boxes+score │
 └──────────────┬───────────┘
-               │ detections
                ▼
 ┌──────────────────────────┐
-│   2. Pre-processing       │
-│  - Resize / scale boxes   │
-│  - Filter low confidence  │
+│ 2. Pre-processing         │
+│    - Resize / scale       │
+│    - Remove low score     │
 └──────────────┬───────────┘
-               │ clean detections
                ▼
 ┌──────────────────────────┐
-│   3. OC-SORT Tracker      │
-│  - Kalman Filter (motion) │
-│  - OCM: momentum from obs │
-│  - OCR: recovery post-occ │
-│  - OOS: smoothing         │
-│  - Hungarian matching     │
+│ 3. OC-SORT Tracker        │
+│    - Kalman Filter        │
+│    - OCM (momentum)       │
+│    - OCR (recover)        │
+│    - OOS (smooth)         │
+│    - Hungarian matching   │
 └──────────────┬───────────┘
-               │ tracked objects (ID + box)
                ▼
 ┌──────────────────────────┐
-│   4. ID Assignment        │
-│  - Consistent player IDs  │
-│  - Handle re-appearance   │
+│ 4. ID Assignment          │
+│    - Consistent IDs       │
+│    - Re-appearance        │
 └──────────────┬───────────┘
-               │
                ▼
 ┌──────────────────────────┐
-│   5. Visualization        │
-│  - Draw boxes + IDs       │
-│  - Optional output video  │
-└──────────────┬───────────┘
-               │
-               ▼
-        Final Tracked Output
+│ 5. Visualization          │
+│    - Draw boxes + ID      │
+│    - Output video         │
+└──────────────────────────┘
+
 
 
